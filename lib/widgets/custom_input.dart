@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 
-
+// Input de texto customizable
 
 class CustomInput extends StatelessWidget {
 
   final IconData icon;
+  final Color iconColor;
+  final Color cursorColor;
   final String placeholder;
   final TextEditingController textController;
   final TextInputType keyboardType;
@@ -17,6 +19,8 @@ class CustomInput extends StatelessWidget {
     @required this.textController, 
     this.keyboardType = TextInputType.text, 
     this.isPassword = false,
+    this.iconColor = Colors.blue,
+    this.cursorColor = Colors.blue,
   });
 
   
@@ -41,9 +45,10 @@ class CustomInput extends StatelessWidget {
         autocorrect: false,
         keyboardType: this.keyboardType,
         obscureText: this.isPassword,
+        cursorColor: this.cursorColor,
         
         decoration: InputDecoration(
-          prefixIcon: Icon( this.icon ),
+          prefixIcon: Icon( this.icon, color: this.iconColor, ),
           focusedBorder: InputBorder.none,
           border: InputBorder.none,
           hintText: this.placeholder,
