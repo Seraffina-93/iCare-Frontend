@@ -1,23 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:icare_front/pages/admin/login_page.dart';
+import 'package:icare_front/pages/admin/overview_page.dart';
+import 'package:icare_front/pages/admin/settings_page.dart';
+import 'package:icare_front/pages/admin/stock_page.dart';
+import 'package:icare_front/pages/admin/tickets_page.dart';
 
-import 'package:icare_front/pages/start_page.dart';
-import 'package:icare_front/pages/loading_page.dart';
-import 'package:icare_front/pages/confirmacion_page.dart';
-import 'package:icare_front/pages/datos_celular_page.dart';
-import 'package:icare_front/pages/datos_usuario_page.dart';
-import 'package:icare_front/pages/turno_garantia_page.dart';
+import 'package:icare_front/pages/users/start_page.dart';
+import 'package:icare_front/pages/users/loading_page.dart';
+import 'package:icare_front/pages/users/confirmacion_page.dart';
+import 'package:icare_front/pages/users/datos_celular_page.dart';
+import 'package:icare_front/pages/users/datos_usuario_page.dart';
+import 'package:icare_front/pages/users/turno_garantia_page.dart';
 import 'package:page_transition/page_transition.dart';
 
 
 // Rutas por nombre genericas
 final Map<String, Widget Function(BuildContext)> appRoutes = {
 
+  
+  // Routes paginas usuario
   'datos_usuario':  (_) => DatosUsuarioPage(),
   'datos_celular':  (_) => DatosCelularPage(),
   'confirmacion':   (_) => ConfirmacionPage(),
   'loading':        (_) => LoadingPage(),
   'start':          (_) => StartPage(),
   'turno_garantia': (_) => TurnoGarantiaPage(),
+
+  // Routes paginas administrador
+  'login':          (_) => LoginPage(),
+  'overview':       (_) => OverviewPage(),
+  'tickets':        (_) => TicketsPage(),
+  'stock':          (_) => StockPage(),
+  'settings':       (_) => SettingsPage(),
 
 };
 

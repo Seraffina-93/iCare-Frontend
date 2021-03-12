@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'iCare',
-      initialRoute: 'datos_usuario',
+      initialRoute: 'login',
       routes: appRoutes,
       onGenerateRoute: generatedRoutes,
     );

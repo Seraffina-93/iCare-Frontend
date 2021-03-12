@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 
-class TurnoGarantiaPage extends StatelessWidget {
+class StockPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('TurnoGarantiaPage'),
+        child: Text('Stock Page'),
      ),
    );
   }
